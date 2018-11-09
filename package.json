@@ -1,0 +1,17 @@
+{
+  "name": "news-sandwich",
+  "version": "1.0.0",
+  "description": "News Sandwich",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "attributes": "^0.1.337",
+    "csv": "^4.0.0",
+    "express": "^4.16.4",
+    "structure": "^1.3.0"
+  }
+}
