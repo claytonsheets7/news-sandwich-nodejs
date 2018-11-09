@@ -74,7 +74,7 @@ const fetchArticles = function(sourceIDs, positive, usuallyPositive, negative) {
 	let promises =[];
 	let articles = [];
 
-	for(let i=0; i<2; i++) {
+	for(let i=0; i<sourceIDs.length; i++) {
 		promises.push(fetchHeadlineArticles(sourceIDs[i]));
 	}
 
@@ -90,6 +90,7 @@ const fetchArticles = function(sourceIDs, positive, usuallyPositive, negative) {
 		console.log(articles.length, "length of the article list");
 //		cachedArticles = articles;
 		cachedArticles = newsService.processArticles(articles, positive, usuallyPositive, negative)
+		console.log(cachedArticles, " These are the cached articles");
 	}).catch(err => console.log(err));
 };
 

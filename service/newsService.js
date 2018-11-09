@@ -12,8 +12,14 @@ const filterArticles = function(articles, positive, usuallyPositive, negative){
 	for(let i=0; i<articles.length; i++) {
 		let article = articles[i];
 		article.weight = 0;
-		let words = article.title.split(' ');
-		let descriptionWords = article.description.split(' ');
+		let words = [];
+		if (typeof article.title != 'undefined' && article.title != null) {
+			words = article.title.split(' ');
+		}
+		let descriptionWords = [];
+		if (typeof article.description != 'undefined' && article.description != null) {
+			descriptionWords = article.description.split(' ');
+		}
 		
 		for(var word in descriptionWords) {
 			words.push(word);
