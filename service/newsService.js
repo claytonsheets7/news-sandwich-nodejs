@@ -44,7 +44,7 @@ const filterArticles = function(articles, positive, usuallyPositive, negative){
 
 const sortArticles = function(articles) {
 	articles.sort(function(a, b) {
-		return a.weight - b.weight;
+		return b.weight - a.weight;
 	});
 	return articles;
 };
